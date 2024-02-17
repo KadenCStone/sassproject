@@ -1,0 +1,112 @@
+$navbar-width: 200px;
+$middlebox-width: 50%;
+$dashbox-width: 250px;
+$dashbox-height: 400px;
+$blue-background: rgb(0, 4, 43);
+
+.dashboard {
+  display: flex;
+  background-color: $blue-background;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+  .navbar {
+    width: $navbar-width;
+    height: 700px;
+    background-color: #333;
+    color: lightsalmon;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navthing {
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      padding-top: 60px;
+      
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+
+  .dashbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .middlebox {
+      display: flex;
+      margin: 40px;
+      box-sizing: border-box;
+      border: 2px solid #333;
+      padding: 8px;
+      background-color: $blue-background;
+
+      .timebox, .dobox, .notebox, .imgbox {
+        width: $dashbox-width;
+        height: $dashbox-height;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: white;
+        box-sizing: border-box;
+
+        h2 {
+          color: #333;
+        }
+
+        &.timebox {
+          .timer {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          .startbtn,
+          .stopbtn {
+            margin-top: 10px;
+            padding: 5px 10px;
+
+            &:hover {
+                background-color: #555;
+            }
+          }
+        }
+
+        &.dobox {
+
+          .task {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+          }
+
+          .taskbtn {
+            padding: 5px 10px;
+            
+            &:hover {
+                background-color:#555;
+              }
+          }
+        }
+
+        &.notebox {
+          textarea {
+            width: 100%;
+            height: 275px;
+          }
+        }
+
+        &.imgbox {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
